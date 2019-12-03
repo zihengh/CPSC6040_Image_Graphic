@@ -1,0 +1,8 @@
+This program is a implementation of shared sampling for alpha matting
+To start the program, type ./matt input_image_name mode
+
+For instance, type "./matt girl.png -t", and the program will read the input image and ask you to provide an existing trimap. 
+
+If you type "./matt hand.jpg -a", it means you are dealing with a green screen image and you want to create the trimap yourself. press 'k' when you have assured the foreground area, press 'U' when the area of unknown pixels are included. press 'w' to save the current trimap to working folder or press 's' to start solving alpha matting using the known and unknown area you just decided. 
+
+When you are dealing with the green screen image, press '1' to change the lower bound and upper bound of H value. Specifically, left button and right button are used to change the  lower bound, while up and down buttons are used to change the upper bound. Press '2' to change the lower bound and upper bound of s value. Press '3' to change the lower bound and upper bound of v value.
