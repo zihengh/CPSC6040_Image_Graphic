@@ -1,0 +1,16 @@
+The program is named OKWarp
+To start the program, type ./OKWarp inputimage warpfunction strategy_mode
+
+warp function:
+1: inv_map()
+2: inv_map2()
+
+strategy_mode:
+1 bilinear
+2 super sampling
+3 adaptive super sampling
+4 combination of strategy
+
+For example, type "./OKWarp west.jpeg 1 1" and you will see a warped image using inv_map() and a repaired image using bilinear.
+
+The program provides to windows, one called warped presents the warped image and another one called repaired presents the repaired image. press w and the program will store the warped or the repaired image due to which window is focused. 
