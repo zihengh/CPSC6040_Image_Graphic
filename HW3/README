@@ -1,0 +1,22 @@
+Green Screening Program
+------------------------------
+Name: Ziheng He       
+Email: zihengh@g.clemson.edu 
+Date: 2018.10.01            
+------------------------------
+There are two programs in the same folder. The first is alphamask. This program is meant to detatch the foreground image from the green background. 
+To start the program, type ./alphamask dhouse.png in command line to begin adjusting the threshold, or type ./alphamask dhouse.png output.png to directly save the result image named as output.png to disk. 
+When the program starts, it reads thresholds.txt to initiate the original threshold parameters. There are five mode of adjusting threshold:
+1 Press '1' to change the lower bound and upper bound of H value. Specifically, left button and right button are used to change the  lower bound, while up and down buttons are used to change the upper bound.
+
+2 Press '2' to change the lower bound and upper bound of s value.
+3 Press '3' to change the lower bound and upper bound of v value.
+3 Press '4' to change the lower bound and upper bound of H value to create a gradient edge between background and foreground.
+
+5 Press '5' to change the two parameters, k1 and k2, for spill suppression. I simply clip the value of g channel in spill area since there is no time left for me to achieve a industrial level spill removal effect. d_spilled.png in the folder is the best I can do. In this function, if g > k1*r+k2*b, g will be clipped to k1*r+k2*b. It suppresses the green light spilled by doctor house's hair but not in a perfect way.
+
+When you are satisfied with the current threshold, press 's' to save them to threshold.txt or press w to save the image you are witnessing on the screen to disk. Be advised, the original thresholds.txt contains my adjustments for dhouse.png. It may not do so well for other green screen images like hand.jpg. You can adjust the thresholds if you want to achieve great effect on other images.
+
+----------------------------------------------------------------------------------
+
+The second program is compose. Type "./compose foreground.png background.png" to start compose the foreground image and background image together. Or "type ./compose foreground.png background.png output.png" to name the image file you want to save at the first time. Use up, down, left and right buttons to adjust the position of foreground image you want to display. press 'w' to save the composed image. A background image called beach.jpg is provided for composition.

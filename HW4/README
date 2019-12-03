@@ -1,0 +1,17 @@
+This program is used to filter an input image from a convolutional kernel read from a filter file
+or a gabor filter kernel generated from parameters theta, sigma and period, and then optionally write out to an image file.
+
+Normal Mode:
+Filter an image from a filter file and optionally write out to an image file
+Type ./convolve <filter_file> <input_image_file> output_image_file>(optional) in commandline
+e.g. "./convolve filters/pulse.filt images/waves.png waves_filtered.png"
+
+The program will read the original image and display on the screen. Meanwhile, a kernel for convolution will be generated according to the filter file. Press 'c' to do a one-time convolution to the image you see on screen. Press 'w' to save the filtered image to file. press 'r' to re-read the original image and display it on screen.
+
+Garbo filter mode:
+Filter an image by Gabor filter generated from parameters and optionally write out to an image file
+Type ./convolve <input_image_file> <output_image_file>(optional) -g <theta> <sigma> <period> in command line. For instance,  "./filt images/Lenna.png Lenna_0_4_4.png -g 0 4 4"
+
+The program will read the original image and display on the screen. Meanwhile, a kernel for convolution will be generated according to the parameters you typed in commandline. Press 'c' to do a one-time convolution to the image you see on screen. Press 'w' to save the filtered image to file. press 'r' to re-read the original image and display it on screen.
+
+
